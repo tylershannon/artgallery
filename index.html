@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="resources/style.css">
+  </head>
+  <body>
+    <h1>Art Gallery</h1>
+    <div>
+      <!-- <a href="/generate.html">Generate Art</a> -->
+    </div>
+    <div id="links"></div>
+  </body>
+
+  <script>
+    var art_links = ['220108', '220109', '220110']
+
+    for (link in art_links) {
+      var d = document.getElementById("links");
+      var a = document.createElement('a');
+      console.log(art_links[link]);
+      a.href = `/art/${art_links[link]}/index.html`;
+      console.log(a.href);
+      a.innerHTML = art_links[link];
+
+      d.appendChild(a);
+    }
+
+
+  </script>
+</html>

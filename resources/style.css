@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body {
+  margin: 20px 20px 20px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Bungee;
+}
+
+a:-webkit-any-link {
+  color: black;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#links {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#links>a{
+  padding: 20px 20px 20px 20px;
+}
