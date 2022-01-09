@@ -22,7 +22,7 @@ let freeze = true;
 function setup() {
   createCanvas(windowWidth-100, windowHeight-100);
   smooth();
-  background(200,100, 55);
+  background(0);
 
   centerX = windowWidth/2-100;
   centerY = windowHeight/2-150;
