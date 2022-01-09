@@ -24,7 +24,7 @@ let initStroke = .000001;
 function setup() {
   createCanvas(windowWidth-100, windowHeight-100);
   smooth();
-  background(255);
+  background(0);
 
   centerX = (windowWidth-100)/2;
   centerY = (windowHeight-150)/2;
@@ -56,8 +56,8 @@ function draw() {
 
 
   strokeWeight(initStroke);
-  stroke(0);
-  //noFill();
+  stroke(255);
+  fill(0);
   translate(x, y);
   angleMode(DEGREES)
   rotate(rotation);

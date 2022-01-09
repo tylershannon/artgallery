@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+html {
+  background: black;
+}
+
 body {
   margin: 20px 20px 20px 20px;
   text-align: center;
@@ -7,10 +11,11 @@ body {
 
 h1 {
   font-family: Bungee;
+  color: white;
 }
 
 a:-webkit-any-link {
-  color: black;
+  color: white;
   font-size: 14pt;
   font-weight: bold;
 }

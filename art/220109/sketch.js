@@ -20,7 +20,7 @@ let freeze = true;
 function setup() {
   createCanvas(windowWidth-100, windowHeight-100);
   smooth();
-  background(255);
+  background(0);
 
   centerX = windowWidth/2;
   centerY = windowHeight/2-100;
@@ -43,7 +43,7 @@ function draw() {
   }
 
   strokeWeight(stepSize/2);
-  stroke(0,a/4);
+  stroke(255,a/4);
   noFill();
 
   beginShape();
