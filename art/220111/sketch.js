@@ -1,7 +1,7 @@
 //control point count
 let formResolution = 9;
 //step size
-let stepSize = 2;
+let stepSize = 20;
 //distortionFactor
 let distortionFactor = 1;
 //overall size of animation
@@ -22,14 +22,14 @@ function setup() {
   smooth();
   background(0);
 
-  centerX = windowWidth/2;
+  centerX = windowWidth/2-150;
   centerY = windowHeight/2-100;
 
   let angle = radians(360/formResolution);
 
   for (let i=0; i<formResolution; i++) {
-    x[i] = cos(angle*i) * initRadius;
-    y[i] = sin(angle*i) * initRadius;
+    x[i] = i;
+    y[i] = i;
   }
 
 }
@@ -42,18 +42,18 @@ function draw() {
     y[i] += random(-stepSize, stepSize);
   }
 
-  strokeWeight(stepSize/2);
+  strokeWeight(stepSize/10);
   stroke(255,a/4);
   noFill();
 
   beginShape();
   curveVertex(x[formResolution-1]+centerX, y[formResolution-1]+centerY);
-  for (let i=0; i<formResolution; i++) {
+  for (let i=0; i<formResolution-5; i++) {
     curveVertex(x[i]+centerX, y[i]+centerY);
   }
   //curveVertex(x[1]+centerX, y[1]+centerY);
-  curveVertex(x[formResolution-1]+centerX, y[formResolution-1]+centerY);
-  curveVertex(x[formResolution]+centerX, y[formResolution]+centerY);
+  //curveVertex(x[formResolution-1]+centerX, y[formResolution-1]+centerY);
+  //curveVertex(x[formResolution]+centerX, y[formResolution]+centerY);
   endShape(CLOSE);
 
   a -= 0.05;
